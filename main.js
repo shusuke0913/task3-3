@@ -21,6 +21,13 @@
         workBtn.textContent = '作業中';
         tdWorkBtn.appendChild(workBtn);
         tr.appendChild(tdWorkBtn);
+        workBtn.addEventListener('click', () => {
+          if(workBtn.textContent === '作業中') {
+            workBtn.textContent = '完了';
+          } else {
+            workBtn.textContent = '作業中';
+          }
+        });
         const tdRemoveBtn = document.createElement('td');
         const removeBtn = document.createElement('button');
         removeBtn.textContent = '削除';
